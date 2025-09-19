@@ -21,27 +21,64 @@ This repository provides a set of Python scripts to generate and work with `llms
   - **count_lines_of_code.py:** Counts lines of code in a directory.
   - **count_chars_of_code.py:** Counts characters in code files.
 
+## Installation
+
+1. Install dependencies:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+2. (Optional) Create a virtual environment and install project in development mode:
+```bash
+python -m uv venv .venv
+.venv/Scripts/python.exe -m pip install -e .
+```
+
+## Configuration
+
+Create a `config.yaml` file in the project root to customize file extensions and settings:
+
+```yaml
+file_extensions:
+  - '.py'
+  - '.js'
+  # Add or remove extensions as needed
+
+exclude_patterns:
+  - '*.log'
+  - '__pycache__'
+
+output:
+  default_llms_file: 'llms-full.txt'
+```
+
 ## Usage Examples
 
 ### Generate `llms-full.txt`
 ```bash
-python src/generate_llms.py
+python src/generate_llms.py /path/to/directory
+python src/generate_llms.py /path/to/directory -o custom-output.txt
 ```
 
 ### Generate a Table of Contents
 ```bash
-python src/generate_toc.py
+python src/generate_toc.py input.md
+python src/generate_toc.py input.md -o custom-toc.md
 ```
 
 ### Count Lines of Code
 ```bash
-python src/count_lines_of_code.py
+python src/count_lines_of_code.py /path/to/directory
 ```
 
 ### Count Characters in Code
 ```bash
-python src/count_chars_of_code.py
+python src/count_chars_of_code.py /path/to/directory
 ```
+
+All commands now support command-line arguments and show progress indicators for large directories.
 
 ## License
 

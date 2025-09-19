@@ -1,5 +1,6 @@
 import re
 import html
+import argparse
 
 def generate_toc(markdown_text):
     """

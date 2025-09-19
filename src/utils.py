@@ -1,4 +1,23 @@
 import os
+import logging
+import yaml
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Load configuration
+def load_config(config_path='config.yaml'):
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+    except FileNotFoundError:
+        logging.warning(f"Config file {config_path} not found, using defaults")
+        return {}
+    except Exception as e:
+        logging.error(f"Error loading config: {e}")
+        return {}
+
+config = load_config()
 
 # Common file extensions for code and text files.
 CODE_EXTENSIONS = (

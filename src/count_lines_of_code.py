@@ -1,4 +1,6 @@
 import os
+import argparse
+from tqdm import tqdm
 from utils import CODE_EXTENSIONS, safe_read
 
 def count_lines_of_code(directory):

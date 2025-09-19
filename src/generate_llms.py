@@ -1,5 +1,6 @@
 import os
 import re
+import argparse
 from utils import safe_read
 
 def generate_llms_full(directory, output_file="llms-full.txt"):
