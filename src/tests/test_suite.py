@@ -1,3 +1,31 @@
+"""
+Comprehensive Test Suite
+
+This module contains a complete test suite for the LLMs-Full.txt Generator project using
+the unittest framework. It tests all major components including file counting, content
+generation, table of contents creation, and utility functions.
+
+Test Coverage:
+- TestCountFunctions: Tests character and line counting functionality
+- TestGenerateLLMSFull: Tests the main llms-full.txt generation process
+- TestGenerateTOC: Tests table of contents generation from markdown
+- TestSafeRead: Tests the safe file reading utility function
+
+Key Features:
+- Uses temporary directories for isolated testing
+- Comprehensive input validation and edge case testing
+- Tests error handling and encoding issues
+- Verifies output format and content accuracy
+- Automated cleanup of test artifacts
+
+Usage:
+    python -m src.tests.test_suite
+    python -m pytest src/tests/test_suite.py
+
+The tests ensure reliability and correctness of all project components and help catch
+regressions during development.
+"""
+
 import os
 import shutil
 import tempfile

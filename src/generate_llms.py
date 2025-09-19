@@ -1,3 +1,24 @@
+"""
+LLMs-Full.txt Generator - Main Script
+
+This script generates a comprehensive llms-full.txt file from a directory structure by aggregating
+Markdown files and other text files. The generated file provides AI-friendly access to project
+documentation and code in a structured format.
+
+Key Features:
+- Scans directories recursively for Markdown and text files
+- Extracts titles and summaries from Markdown files automatically
+- Organizes content into structured sections for easy AI parsing
+- Handles various file types including Python, JavaScript, HTML, and more
+- Provides robust error handling for encoding issues
+
+Usage:
+    python -m src.generate_llms [directory] [output_file]
+
+Example:
+    python -m src.generate_llms /path/to/project llms-full.txt
+"""
+
 import os
 import re
 import argparse

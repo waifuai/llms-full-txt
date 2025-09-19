@@ -1,3 +1,26 @@
+"""
+Table of Contents Generator
+
+This script generates a table of contents (TOC) from Markdown text by parsing headers and creating
+anchor links. It supports multiple header levels and produces a clean, navigable TOC in Markdown format.
+
+Key Features:
+- Parses Markdown headers (# ## ###) of all levels
+- Generates anchor links from header text automatically
+- Handles special characters by escaping and URL-encoding
+- Creates hierarchical indentation for nested sections
+- Produces clean, readable Markdown output
+
+Usage:
+    python -m src.generate_toc [markdown_file]
+
+Output:
+    Creates a toc.md file with the generated table of contents
+
+Example:
+    python -m src.generate_toc README.md
+"""
+
 import re
 import html
 import argparse

@@ -1,3 +1,36 @@
+"""
+LLMs-Full.txt Generator Animation
+
+This script creates an animated presentation using Manim to demonstrate the LLMs-Full.txt
+Generator project. The animation showcases the project's purpose, structure, workflow,
+and key features in an engaging visual format.
+
+Animation Structure:
+- Title and project overview introduction
+- Visual representation of project structure with interconnected components
+- Step-by-step workflow demonstration showing how the system works
+- Key features highlight with animated bullet points
+- Final summary and licensing information
+
+Key Features:
+- Professional animated presentation suitable for demos and documentation
+- Visual breakdown of project components and their relationships
+- Animated workflow showing the 4-step process
+- Comprehensive feature showcase
+- Smooth transitions and professional styling
+
+Usage:
+    manim -pql manim-animation.py LLMsFullTxtAnimation
+
+Requirements:
+    - Manim Community edition installed
+    - Run from project root directory
+    - Output video file will be generated in media/videos/
+
+This animation serves as both a demonstration tool and educational content about the
+project's capabilities and architecture.
+"""
+
 from manim import *
 
 class LLMsFullTxtAnimation(Scene):

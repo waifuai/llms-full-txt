@@ -1,3 +1,28 @@
+"""
+Lines of Code Counter
+
+This script analyzes a directory structure and counts lines of code across all supported
+text-based files. It provides comprehensive statistics about code volume and can be useful
+for project analysis, metrics tracking, and complexity assessment.
+
+Key Features:
+- Recursively scans directories and subdirectories
+- Supports wide range of file types through CODE_EXTENSIONS
+- Uses progress bar (tqdm) for long-running operations
+- Handles encoding errors gracefully using safe_read utility
+- Returns both total counts and per-file breakdowns
+- Fast and memory-efficient processing
+
+Usage:
+    python -m src.count_lines_of_code [directory_path]
+
+Output:
+    Displays total lines of code and provides detailed file-by-file statistics
+
+Example:
+    python -m src.count_lines_of_code /path/to/project
+"""
+
 import os
 import argparse
 from tqdm import tqdm

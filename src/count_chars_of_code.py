@@ -1,3 +1,28 @@
+"""
+Character Counter
+
+This script analyzes a directory structure and counts characters across all supported
+text-based files. It provides detailed statistics about text volume and can be useful
+for content analysis, size estimation, and project metrics.
+
+Key Features:
+- Recursively scans directories and subdirectories
+- Supports wide range of file types through CODE_EXTENSIONS
+- Uses progress bar (tqdm) for long-running operations
+- Handles encoding errors gracefully using safe_read utility
+- Returns both total counts and per-file breakdowns
+- Fast and memory-efficient processing
+
+Usage:
+    python -m src.count_chars_of_code [directory_path]
+
+Output:
+    Displays total character count and provides detailed file-by-file statistics
+
+Example:
+    python -m src.count_chars_of_code /path/to/project
+"""
+
 import os
 import argparse
 from tqdm import tqdm

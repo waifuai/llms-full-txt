@@ -1,3 +1,23 @@
+"""
+Utility Functions and Constants
+
+This module provides common utility functions and constants used throughout the LLMs-Full.txt
+Generator project. It includes file handling utilities, configuration management, and shared
+constants for file type detection.
+
+Key Components:
+- safe_read(): Robust file reading with encoding fallback
+- load_config(): YAML configuration file loading with error handling
+- CODE_EXTENSIONS: Comprehensive tuple of supported file extensions for code analysis
+- Logging configuration for consistent error reporting and debugging
+
+Usage:
+    from utils import safe_read, CODE_EXTENSIONS, load_config
+
+The module automatically loads configuration from config.yaml on import and sets up logging
+for consistent error reporting across the project.
+"""
+
 import os
 import logging
 import yaml
